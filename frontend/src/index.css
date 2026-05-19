@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 120 10% 93%;
+    --card: 120 20% 9%;
+    --card-foreground: 120 10% 93%;
+    --primary: 142 72% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 15% 14%;
+    --secondary-foreground: 120 8% 70%;
+    --muted: 120 10% 12%;
+    --muted-foreground: 120 8% 55%;
+    --accent: 120 15% 16%;
+    --accent-foreground: 120 8% 80%;
+    --destructive: 0 84% 60%;
+    --border: 120 20% 14%;
+    --input: 120 20% 10%;
+    --ring: 142 72% 42%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-[#1E3022];
+  }
+
+  html {
+    @apply scroll-smooth bg-[#080E0A];
+  }
+
+  body {
+    @apply min-w-80 bg-[#080E0A] text-[#E8F0EA];
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  ::selection {
+    @apply bg-green-600 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0D1610;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #254A2A;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2D6A35;
+  }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image:
+      radial-gradient(ellipse at 58% 10%, rgba(245, 158, 11, .12) 0%, transparent 42%),
+      radial-gradient(ellipse at 22% 46%, rgba(22, 163, 74, .10) 0%, transparent 44%),
+      linear-gradient(rgba(22, 163, 74, .08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(22, 163, 74, .08) 1px, transparent 1px),
+      linear-gradient(180deg, #0D1610 0%, #080E0A 100%);
+    background-position:
+      center top,
+      left center,
+      center top,
+      center top,
+      center;
+    background-size:
+      100% 100%,
+      100% 100%,
+      72px 72px,
+      72px 72px,
+      auto;
+  }
+}
