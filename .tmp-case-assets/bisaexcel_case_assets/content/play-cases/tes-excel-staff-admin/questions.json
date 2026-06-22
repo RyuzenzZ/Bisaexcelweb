@@ -1,0 +1,96 @@
+{
+  "caseSlug": "tes-excel-staff-admin",
+  "title": "Tes Excel Staff Admin",
+  "questions": [
+    {
+      "id": "sa-001",
+      "level": 1,
+      "questionText": "Berapa total Qty seluruh transaksi?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 10,
+      "formulaSkills": [
+        "SUM"
+      ],
+      "hint": "Jumlahkan kolom Qty."
+    },
+    {
+      "id": "sa-002",
+      "level": 2,
+      "questionText": "Berapa jumlah transaksi dengan status Lunas?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 15,
+      "formulaSkills": [
+        "COUNTIF"
+      ],
+      "hint": "Hitung Status Pembayaran = Lunas."
+    },
+    {
+      "id": "sa-003",
+      "level": 3,
+      "questionText": "Berapa total nilai transaksi sebelum memperhatikan status pembayaran?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 20,
+      "formulaSkills": [
+        "SUMPRODUCT"
+      ],
+      "hint": "Qty x Harga untuk semua baris."
+    },
+    {
+      "id": "sa-004",
+      "level": 4,
+      "questionText": "Rumus apa yang paling tepat untuk menghitung jumlah transaksi dengan status tertentu?",
+      "inputType": "multiple_choice",
+      "answerType": "choice",
+      "choices": [
+        {
+          "label": "COUNTIF",
+          "value": "COUNTIF"
+        },
+        {
+          "label": "SUM",
+          "value": "SUM"
+        },
+        {
+          "label": "AVERAGE",
+          "value": "AVERAGE"
+        },
+        {
+          "label": "RIGHT",
+          "value": "RIGHT"
+        }
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "COUNTIF"
+      ],
+      "hint": "Butuh menghitung berdasarkan kriteria."
+    },
+    {
+      "id": "sa-005",
+      "level": 5,
+      "questionText": "Berapa total Qty untuk Produk Paket C?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 25,
+      "formulaSkills": [
+        "SUMIF"
+      ],
+      "hint": "Jumlahkan Qty berdasarkan nama produk."
+    },
+    {
+      "id": "sa-bonus",
+      "level": "bonus",
+      "questionText": "Berapa rata-rata nilai transaksi per baris? Bulatkan 2 angka desimal.",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 10,
+      "formulaSkills": [
+        "AVERAGE"
+      ],
+      "hint": "Total nilai transaksi dibagi jumlah transaksi."
+    }
+  ]
+}

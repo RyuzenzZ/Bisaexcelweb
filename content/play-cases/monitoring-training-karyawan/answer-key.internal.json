@@ -1,0 +1,79 @@
+{
+  "caseSlug": "monitoring-training-karyawan",
+  "questions": [
+    {
+      "questionId": "mt-001",
+      "correctAnswer": "70",
+      "acceptedAnswers": [
+        "70"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "COUNTIF"
+      ]
+    },
+    {
+      "questionId": "mt-002",
+      "correctAnswer": "81.0",
+      "acceptedAnswers": [
+        "81.0",
+        "81"
+      ],
+      "points": 15,
+      "formulaSkills": [
+        "AVERAGEIF"
+      ]
+    },
+    {
+      "questionId": "mt-003",
+      "correctAnswer": "75.00%",
+      "acceptedAnswers": [
+        "75.00%",
+        "75,00%",
+        "75.0"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "COUNTIF",
+        "persentase"
+      ]
+    },
+    {
+      "questionId": "mt-004",
+      "correctAnswer": "COUNTIF",
+      "acceptedAnswers": [
+        "COUNTIF"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "COUNTIF"
+      ]
+    },
+    {
+      "questionId": "mt-005",
+      "correctAnswer": "Sales",
+      "acceptedAnswers": [
+        "Sales",
+        "sales"
+      ],
+      "points": 25,
+      "formulaSkills": [
+        "COUNTIFS",
+        "dashboard summary"
+      ]
+    },
+    {
+      "questionId": "mt-bonus",
+      "correctAnswer": "18.88",
+      "acceptedAnswers": [
+        "18.88",
+        "19"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "AVERAGE",
+        "helper column"
+      ]
+    }
+  ]
+}

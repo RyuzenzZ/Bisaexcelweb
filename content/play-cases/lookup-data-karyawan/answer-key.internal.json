@@ -1,0 +1,77 @@
+{
+  "caseSlug": "lookup-data-karyawan",
+  "questions": [
+    {
+      "questionId": "lk-001",
+      "correctAnswer": "60",
+      "acceptedAnswers": [
+        "60"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "COUNT"
+      ]
+    },
+    {
+      "questionId": "lk-002",
+      "correctAnswer": "6600000",
+      "acceptedAnswers": [
+        "6600000",
+        "Rp 6.600.000",
+        "6600000"
+      ],
+      "points": 15,
+      "formulaSkills": [
+        "VLOOKUP",
+        "XLOOKUP"
+      ]
+    },
+    {
+      "questionId": "lk-003",
+      "correctAnswer": "Marketing",
+      "acceptedAnswers": [
+        "Marketing",
+        "marketing"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "XLOOKUP"
+      ]
+    },
+    {
+      "questionId": "lk-004",
+      "correctAnswer": "XLOOKUP",
+      "acceptedAnswers": [
+        "XLOOKUP"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "XLOOKUP"
+      ]
+    },
+    {
+      "questionId": "lk-005",
+      "correctAnswer": "36",
+      "acceptedAnswers": [
+        "36"
+      ],
+      "points": 25,
+      "formulaSkills": [
+        "COUNTIF"
+      ]
+    },
+    {
+      "questionId": "lk-bonus",
+      "correctAnswer": "Manager IT",
+      "acceptedAnswers": [
+        "Manager IT",
+        "manager it"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "XLOOKUP",
+        "FILTER"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+Tanggal,No Invoice,Sales,Produk,Kategori,Wilayah,Qty,Harga Satuan,Diskon
+2026-01-01,INV-0001,Ayu,Matcha Latte,F&B,Jakarta Selatan,1,22000,0
+2026-01-01,INV-0002,Budi,Teh Lemon,F&B,Bekasi,3,14000,0
+2026-01-01,INV-0003,Citra,Matcha Latte,F&B,Tangerang,5,22000,0.05
+2026-01-01,INV-0004,Dimas,Teh Lemon,F&B,Jakarta Timur,7,14000,0.1
+2026-01-01,INV-0005,Eka,Matcha Latte,F&B,Depok,2,22000,0
+2026-01-01,INV-0006,Ayu,Teh Lemon,F&B,Jakarta Selatan,4,14000,0
+2026-01-02,INV-0007,Budi,Matcha Latte,F&B,Bekasi,6,22000,0.05
+2026-01-02,INV-0008,Citra,Teh Lemon,F&B,Tangerang,1,14000,0.1
+2026-01-02,INV-0009,Dimas,Matcha Latte,F&B,Jakarta Timur,3,22000,0
+2026-01-02,INV-0010,Eka,Teh Lemon,F&B,Depok,5,14000,0
+2026-01-02,INV-0011,Ayu,Matcha Latte,F&B,Jakarta Selatan,7,22000,0.05
+2026-01-02,INV-0012,Budi,Teh Lemon,F&B,Bekasi,2,14000,0.1
+2026-01-03,INV-0013,Citra,Matcha Latte,F&B,Tangerang,4,22000,0
+2026-01-03,INV-0014,Dimas,Teh Lemon,F&B,Jakarta Timur,6,14000,0
+2026-01-03,INV-0015,Eka,Matcha Latte,F&B,Depok,1,22000,0.05
+2026-01-03,INV-0016,Ayu,Teh Lemon,F&B,Jakarta Selatan,3,14000,0.1
+2026-01-03,INV-0017,Budi,Matcha Latte,F&B,Bekasi,5,22000,0
+2026-01-03,INV-0018,Citra,Teh Lemon,F&B,Tangerang,7,14000,0
+2026-01-04,INV-0019,Dimas,Matcha Latte,F&B,Jakarta Timur,2,22000,0.05
+2026-01-04,INV-0020,Eka,Teh Lemon,F&B,Depok,4,14000,0.1
+2026-01-04,INV-0021,Ayu,Matcha Latte,F&B,Jakarta Selatan,6,22000,0
+2026-01-04,INV-0022,Budi,Teh Lemon,F&B,Bekasi,1,14000,0
+2026-01-04,INV-0023,Citra,Matcha Latte,F&B,Tangerang,3,22000,0.05
+2026-01-04,INV-0024,Dimas,Teh Lemon,F&B,Jakarta Timur,5,14000,0.1
+2026-01-05,INV-0025,Eka,Matcha Latte,F&B,Depok,7,22000,0
+2026-01-05,INV-0026,Ayu,Teh Lemon,F&B,Jakarta Selatan,2,14000,0
+2026-01-05,INV-0027,Budi,Matcha Latte,F&B,Bekasi,4,22000,0.05
+2026-01-05,INV-0028,Citra,Teh Lemon,F&B,Tangerang,6,14000,0.1
+2026-01-05,INV-0029,Dimas,Matcha Latte,F&B,Jakarta Timur,1,22000,0
+2026-01-05,INV-0030,Eka,Teh Lemon,F&B,Depok,3,14000,0
+2026-01-06,INV-0031,Ayu,Matcha Latte,F&B,Jakarta Selatan,5,22000,0.05
+2026-01-06,INV-0032,Budi,Teh Lemon,F&B,Bekasi,7,14000,0.1
+2026-01-06,INV-0033,Citra,Matcha Latte,F&B,Tangerang,2,22000,0
+2026-01-06,INV-0034,Dimas,Teh Lemon,F&B,Jakarta Timur,4,14000,0
+2026-01-06,INV-0035,Eka,Matcha Latte,F&B,Depok,6,22000,0.05
+2026-01-06,INV-0036,Ayu,Teh Lemon,F&B,Jakarta Selatan,1,14000,0.1
+2026-01-07,INV-0037,Budi,Matcha Latte,F&B,Bekasi,3,22000,0
+2026-01-07,INV-0038,Citra,Teh Lemon,F&B,Tangerang,5,14000,0
+2026-01-07,INV-0039,Dimas,Matcha Latte,F&B,Jakarta Timur,7,22000,0.05
+2026-01-07,INV-0040,Eka,Teh Lemon,F&B,Depok,2,14000,0.1
+2026-01-07,INV-0041,Ayu,Matcha Latte,F&B,Jakarta Selatan,4,22000,0
+2026-01-07,INV-0042,Budi,Teh Lemon,F&B,Bekasi,6,14000,0
+2026-01-08,INV-0043,Citra,Matcha Latte,F&B,Tangerang,1,22000,0.05
+2026-01-08,INV-0044,Dimas,Teh Lemon,F&B,Jakarta Timur,3,14000,0.1
+2026-01-08,INV-0045,Eka,Matcha Latte,F&B,Depok,5,22000,0
+2026-01-08,INV-0046,Ayu,Teh Lemon,F&B,Jakarta Selatan,7,14000,0
+2026-01-08,INV-0047,Budi,Matcha Latte,F&B,Bekasi,2,22000,0.05
+2026-01-08,INV-0048,Citra,Teh Lemon,F&B,Tangerang,4,14000,0.1
+2026-01-09,INV-0049,Dimas,Matcha Latte,F&B,Jakarta Timur,6,22000,0
+2026-01-09,INV-0050,Eka,Teh Lemon,F&B,Depok,1,14000,0
+2026-01-09,INV-0051,Ayu,Matcha Latte,F&B,Jakarta Selatan,3,22000,0.05
+2026-01-09,INV-0052,Budi,Teh Lemon,F&B,Bekasi,5,14000,0.1
+2026-01-09,INV-0053,Citra,Matcha Latte,F&B,Tangerang,7,22000,0
+2026-01-09,INV-0054,Dimas,Teh Lemon,F&B,Jakarta Timur,2,14000,0
+2026-01-10,INV-0055,Eka,Matcha Latte,F&B,Depok,4,22000,0.05
+2026-01-10,INV-0056,Ayu,Teh Lemon,F&B,Jakarta Selatan,6,14000,0.1
+2026-01-10,INV-0057,Budi,Matcha Latte,F&B,Bekasi,1,22000,0
+2026-01-10,INV-0058,Citra,Teh Lemon,F&B,Tangerang,3,14000,0
+2026-01-10,INV-0059,Dimas,Matcha Latte,F&B,Jakarta Timur,5,22000,0.05
+2026-01-10,INV-0060,Eka,Teh Lemon,F&B,Depok,7,14000,0.1

@@ -1,0 +1,99 @@
+{
+  "caseSlug": "growth-omzet-penjualan",
+  "title": "Growth Omzet Penjualan",
+  "questions": [
+    {
+      "id": "go-001",
+      "level": 1,
+      "questionText": "Berapa total omzet 2026 seluruh data?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 10,
+      "formulaSkills": [
+        "SUM"
+      ],
+      "hint": "Jumlahkan kolom Omzet 2026."
+    },
+    {
+      "id": "go-002",
+      "level": 2,
+      "questionText": "Berapa persen growth total omzet dari 2025 ke 2026? Bulatkan 2 angka desimal.",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 15,
+      "formulaSkills": [
+        "growth calculation"
+      ],
+      "hint": "(Omzet 2026 - Omzet 2025) / Omzet 2025."
+    },
+    {
+      "id": "go-003",
+      "level": 3,
+      "questionText": "Produk apa yang memiliki growth persentase tertinggi?",
+      "inputType": "manual_input",
+      "answerType": "text",
+      "points": 20,
+      "formulaSkills": [
+        "SUMIF",
+        "growth calculation"
+      ],
+      "hint": "Hitung growth per produk."
+    },
+    {
+      "id": "go-004",
+      "level": 4,
+      "questionText": "Rumus apa yang cocok untuk memberi status 'Tercapai' jika Omzet 2026 >= Target 2026?",
+      "inputType": "multiple_choice",
+      "answerType": "choice",
+      "choices": [
+        {
+          "label": "IF",
+          "value": "IF"
+        },
+        {
+          "label": "LEFT",
+          "value": "LEFT"
+        },
+        {
+          "label": "COUNT",
+          "value": "COUNT"
+        },
+        {
+          "label": "TODAY",
+          "value": "TODAY"
+        }
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "IF"
+      ],
+      "hint": "Butuh logika benar/salah."
+    },
+    {
+      "id": "go-005",
+      "level": 5,
+      "questionText": "Berapa persen growth omzet Region Jakarta? Bulatkan 2 angka desimal.",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 25,
+      "formulaSkills": [
+        "SUMIFS",
+        "growth calculation"
+      ],
+      "hint": "Filter region Jakarta lalu bandingkan 2025 vs 2026."
+    },
+    {
+      "id": "go-bonus",
+      "level": "bonus",
+      "questionText": "Berapa jumlah baris yang Omzet 2026-nya belum mencapai target?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 10,
+      "formulaSkills": [
+        "COUNTIF",
+        "IF"
+      ],
+      "hint": "Hitung baris Omzet 2026 < Target 2026."
+    }
+  ]
+}

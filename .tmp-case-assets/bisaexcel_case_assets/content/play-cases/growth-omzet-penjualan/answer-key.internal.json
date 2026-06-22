@@ -1,0 +1,81 @@
+{
+  "caseSlug": "growth-omzet-penjualan",
+  "questions": [
+    {
+      "questionId": "go-001",
+      "correctAnswer": "1469478500",
+      "acceptedAnswers": [
+        "1469478500",
+        "Rp 1.469.478.500",
+        "1469478500"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "SUM"
+      ]
+    },
+    {
+      "questionId": "go-002",
+      "correctAnswer": "13.73%",
+      "acceptedAnswers": [
+        "13.73%",
+        "13,73%",
+        "13.73"
+      ],
+      "points": 15,
+      "formulaSkills": [
+        "growth calculation"
+      ]
+    },
+    {
+      "questionId": "go-003",
+      "correctAnswer": "Paket D",
+      "acceptedAnswers": [
+        "Paket D",
+        "paket d"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "SUMIF",
+        "growth calculation"
+      ]
+    },
+    {
+      "questionId": "go-004",
+      "correctAnswer": "IF",
+      "acceptedAnswers": [
+        "IF"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "IF"
+      ]
+    },
+    {
+      "questionId": "go-005",
+      "correctAnswer": "13.75%",
+      "acceptedAnswers": [
+        "13.75%",
+        "13,75%",
+        "13.75"
+      ],
+      "points": 25,
+      "formulaSkills": [
+        "SUMIFS",
+        "growth calculation"
+      ]
+    },
+    {
+      "questionId": "go-bonus",
+      "correctAnswer": "40",
+      "acceptedAnswers": [
+        "40"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "COUNTIF",
+        "IF"
+      ]
+    }
+  ]
+}

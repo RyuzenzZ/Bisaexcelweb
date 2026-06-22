@@ -1,0 +1,81 @@
+{
+  "caseSlug": "upah-lembur-karyawan",
+  "questions": [
+    {
+      "questionId": "ul-001",
+      "correctAnswer": "15",
+      "acceptedAnswers": [
+        "15"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "COUNTUNIQUE",
+        "membaca ID"
+      ]
+    },
+    {
+      "questionId": "ul-002",
+      "correctAnswer": "106",
+      "acceptedAnswers": [
+        "106",
+        "106 jam"
+      ],
+      "points": 15,
+      "formulaSkills": [
+        "SUM"
+      ]
+    },
+    {
+      "questionId": "ul-003",
+      "correctAnswer": "170000",
+      "acceptedAnswers": [
+        "170000",
+        "Rp 170.000",
+        "170000"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "SUMIF",
+        "perkalian"
+      ]
+    },
+    {
+      "questionId": "ul-004",
+      "correctAnswer": "Gudang",
+      "acceptedAnswers": [
+        "Gudang",
+        "gudang"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "SUMIF",
+        "ranking"
+      ]
+    },
+    {
+      "questionId": "ul-005",
+      "correctAnswer": "IF",
+      "acceptedAnswers": [
+        "IF"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "IF"
+      ]
+    },
+    {
+      "questionId": "ul-bonus",
+      "correctAnswer": "2920000",
+      "acceptedAnswers": [
+        "2920000",
+        "Rp 2.920.000",
+        "2920000"
+      ],
+      "points": 15,
+      "formulaSkills": [
+        "SUMPRODUCT",
+        "perkalian"
+      ]
+    }
+  ]
+}

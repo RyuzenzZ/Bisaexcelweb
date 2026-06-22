@@ -1,0 +1,100 @@
+{
+  "caseSlug": "upah-lembur-karyawan",
+  "title": "Upah dan Lembur Karyawan",
+  "questions": [
+    {
+      "id": "ul-001",
+      "level": 1,
+      "questionText": "Berapa jumlah karyawan unik dalam dataset?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 10,
+      "formulaSkills": [
+        "COUNTUNIQUE",
+        "membaca ID"
+      ],
+      "hint": "Hitung ID Karyawan unik."
+    },
+    {
+      "id": "ul-002",
+      "level": 2,
+      "questionText": "Berapa total jam lembur seluruh karyawan?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 15,
+      "formulaSkills": [
+        "SUM"
+      ],
+      "hint": "Jumlahkan kolom Jam Lembur."
+    },
+    {
+      "id": "ul-003",
+      "level": 3,
+      "questionText": "Berapa total upah lembur untuk Andi?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 20,
+      "formulaSkills": [
+        "SUMIF",
+        "perkalian"
+      ],
+      "hint": "Jam Lembur x Tarif Lembur/Jam untuk nama Andi."
+    },
+    {
+      "id": "ul-004",
+      "level": 4,
+      "questionText": "Divisi mana yang memiliki total jam lembur paling tinggi?",
+      "inputType": "manual_input",
+      "answerType": "text",
+      "points": 20,
+      "formulaSkills": [
+        "SUMIF",
+        "ranking"
+      ],
+      "hint": "Buat rekap jam lembur per divisi."
+    },
+    {
+      "id": "ul-005",
+      "level": 5,
+      "questionText": "Rumus logika apa yang cocok untuk memberi status 'Lembur' jika Jam Lembur lebih dari 0?",
+      "inputType": "multiple_choice",
+      "answerType": "choice",
+      "choices": [
+        {
+          "label": "SUM",
+          "value": "SUM"
+        },
+        {
+          "label": "IF",
+          "value": "IF"
+        },
+        {
+          "label": "VLOOKUP",
+          "value": "VLOOKUP"
+        },
+        {
+          "label": "LEFT",
+          "value": "LEFT"
+        }
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "IF"
+      ],
+      "hint": "Butuh rumus logika."
+    },
+    {
+      "id": "ul-bonus",
+      "level": "bonus",
+      "questionText": "Berapa total seluruh upah lembur dalam dataset?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 15,
+      "formulaSkills": [
+        "SUMPRODUCT",
+        "perkalian"
+      ],
+      "hint": "Jam Lembur x Tarif Lembur/Jam untuk semua baris."
+    }
+  ]
+}

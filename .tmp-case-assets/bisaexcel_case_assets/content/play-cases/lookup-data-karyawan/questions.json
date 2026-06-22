@@ -1,0 +1,98 @@
+{
+  "caseSlug": "lookup-data-karyawan",
+  "title": "Lookup Data Karyawan",
+  "questions": [
+    {
+      "id": "lk-001",
+      "level": 1,
+      "questionText": "Berapa total karyawan dalam master data?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 10,
+      "formulaSkills": [
+        "COUNT"
+      ],
+      "hint": "Hitung jumlah ID Karyawan."
+    },
+    {
+      "id": "lk-002",
+      "level": 2,
+      "questionText": "Berapa gaji pokok untuk ID KRY-0017?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 15,
+      "formulaSkills": [
+        "VLOOKUP",
+        "XLOOKUP"
+      ],
+      "hint": "Cari berdasarkan ID Karyawan."
+    },
+    {
+      "id": "lk-003",
+      "level": 3,
+      "questionText": "Divisi apa untuk ID KRY-0042?",
+      "inputType": "manual_input",
+      "answerType": "text",
+      "points": 20,
+      "formulaSkills": [
+        "XLOOKUP"
+      ],
+      "hint": "Cari kolom Divisi berdasarkan ID."
+    },
+    {
+      "id": "lk-004",
+      "level": 4,
+      "questionText": "Rumus mana yang lebih fleksibel untuk lookup ke kiri dan kanan di Excel modern?",
+      "inputType": "multiple_choice",
+      "answerType": "choice",
+      "choices": [
+        {
+          "label": "VLOOKUP",
+          "value": "VLOOKUP"
+        },
+        {
+          "label": "XLOOKUP",
+          "value": "XLOOKUP"
+        },
+        {
+          "label": "SUM",
+          "value": "SUM"
+        },
+        {
+          "label": "DATEDIF",
+          "value": "DATEDIF"
+        }
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "XLOOKUP"
+      ],
+      "hint": "Fungsi lookup modern Microsoft 365."
+    },
+    {
+      "id": "lk-005",
+      "level": 5,
+      "questionText": "Berapa jumlah karyawan dengan status Aktif?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 25,
+      "formulaSkills": [
+        "COUNTIF"
+      ],
+      "hint": "Hitung Status = Aktif."
+    },
+    {
+      "id": "lk-bonus",
+      "level": "bonus",
+      "questionText": "Siapa nama manager untuk divisi IT?",
+      "inputType": "manual_input",
+      "answerType": "text",
+      "points": 10,
+      "formulaSkills": [
+        "XLOOKUP",
+        "FILTER"
+      ],
+      "hint": "Cari salah satu baris Divisi IT."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "caseSlug": "monitoring-training-karyawan",
+  "title": "Monitoring Training Karyawan",
+  "questions": [
+    {
+      "id": "mt-001",
+      "level": 1,
+      "questionText": "Berapa jumlah peserta yang hadir?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 10,
+      "formulaSkills": [
+        "COUNTIF"
+      ],
+      "hint": "Hitung Status Hadir = Hadir."
+    },
+    {
+      "id": "mt-002",
+      "level": 2,
+      "questionText": "Berapa rata-rata Post-Test untuk training Excel Dasar? Bulatkan 2 angka desimal.",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 15,
+      "formulaSkills": [
+        "AVERAGEIF"
+      ],
+      "hint": "Rata-rata Post-Test dengan kriteria Training = Excel Dasar."
+    },
+    {
+      "id": "mt-003",
+      "level": 3,
+      "questionText": "Berapa persen completion rate peserta yang Lulus? Bulatkan 2 angka desimal.",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 20,
+      "formulaSkills": [
+        "COUNTIF",
+        "persentase"
+      ],
+      "hint": "Jumlah Lulus / total peserta."
+    },
+    {
+      "id": "mt-004",
+      "level": 4,
+      "questionText": "Rumus apa yang cocok untuk menghitung jumlah peserta berdasarkan Status Hadir?",
+      "inputType": "multiple_choice",
+      "answerType": "choice",
+      "choices": [
+        {
+          "label": "COUNTIF",
+          "value": "COUNTIF"
+        },
+        {
+          "label": "SUM",
+          "value": "SUM"
+        },
+        {
+          "label": "XLOOKUP",
+          "value": "XLOOKUP"
+        },
+        {
+          "label": "DATEDIF",
+          "value": "DATEDIF"
+        }
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "COUNTIF"
+      ],
+      "hint": "Butuh menghitung berdasarkan satu kriteria."
+    },
+    {
+      "id": "mt-005",
+      "level": 5,
+      "questionText": "Divisi apa yang memiliki jumlah peserta Lulus terbanyak?",
+      "inputType": "manual_input",
+      "answerType": "text",
+      "points": 25,
+      "formulaSkills": [
+        "COUNTIFS",
+        "dashboard summary"
+      ],
+      "hint": "Buat rekap Lulus per divisi."
+    },
+    {
+      "id": "mt-bonus",
+      "level": "bonus",
+      "questionText": "Berapa rata-rata kenaikan nilai dari Pre-Test ke Post-Test? Bulatkan 2 angka desimal.",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 10,
+      "formulaSkills": [
+        "AVERAGE",
+        "helper column"
+      ],
+      "hint": "Post-Test - Pre-Test untuk setiap peserta lalu rata-rata."
+    }
+  ]
+}

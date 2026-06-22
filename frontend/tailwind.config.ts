@@ -1,4 +1,5 @@
-import type { Config } from 'tailwindcss'
+﻿import type { Config } from 'tailwindcss'
+import tailwindcssAnimate from 'tailwindcss-animate'
 
 const config: Config = {
   darkMode: ['class'],
@@ -19,10 +20,10 @@ const config: Config = {
         'be-dim': '#4D6650',
       },
       fontFamily: {
-        heading: ['Plus Jakarta Sans', 'sans-serif'],
-        body: ['DM Sans', 'sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
-        display: ['Syne', 'sans-serif'],
+        display: ['Montserrat', 'sans-serif'],
       },
       boxShadow: {
         'glow-green': '0 0 20px rgba(22,163,74,0.30)',
@@ -47,7 +48,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [tailwindcssAnimate],
 }
 
 export default config
+

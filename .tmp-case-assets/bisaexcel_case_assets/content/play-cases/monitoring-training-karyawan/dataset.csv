@@ -1,0 +1,81 @@
+ID Peserta,Nama,Divisi,Training,Tanggal Training,Status Hadir,Pre-Test,Post-Test,Status Lulus
+TRN-0001,Peserta 01,HRD,Excel Dasar,2026-03-01,Tidak Hadir,45,55,Belum Lulus
+TRN-0002,Peserta 02,Sales,Excel Intermediate,2026-03-01,Hadir,52,65,Belum Lulus
+TRN-0003,Peserta 03,IT,Power Query,2026-03-01,Hadir,59,75,Lulus
+TRN-0004,Peserta 04,HRD,Dashboard Excel,2026-03-01,Hadir,66,85,Lulus
+TRN-0005,Peserta 05,Sales,Excel Dasar,2026-03-01,Hadir,73,95,Lulus
+TRN-0006,Peserta 06,IT,Excel Intermediate,2026-03-01,Hadir,80,100,Lulus
+TRN-0007,Peserta 07,HRD,Power Query,2026-03-01,Hadir,47,75,Lulus
+TRN-0008,Peserta 08,Sales,Dashboard Excel,2026-03-01,Hadir,54,65,Belum Lulus
+TRN-0009,Peserta 09,IT,Excel Dasar,2026-03-02,Tidak Hadir,61,75,Belum Lulus
+TRN-0010,Peserta 10,HRD,Excel Intermediate,2026-03-02,Hadir,68,85,Lulus
+TRN-0011,Peserta 11,Sales,Power Query,2026-03-02,Hadir,75,95,Lulus
+TRN-0012,Peserta 12,IT,Dashboard Excel,2026-03-02,Hadir,82,100,Lulus
+TRN-0013,Peserta 13,HRD,Excel Dasar,2026-03-02,Hadir,49,75,Lulus
+TRN-0014,Peserta 14,Sales,Excel Intermediate,2026-03-02,Hadir,56,85,Lulus
+TRN-0015,Peserta 15,IT,Power Query,2026-03-02,Hadir,63,75,Lulus
+TRN-0016,Peserta 16,HRD,Dashboard Excel,2026-03-02,Hadir,70,85,Lulus
+TRN-0017,Peserta 17,Sales,Excel Dasar,2026-03-03,Tidak Hadir,77,95,Belum Lulus
+TRN-0018,Peserta 18,IT,Excel Intermediate,2026-03-03,Hadir,84,100,Lulus
+TRN-0019,Peserta 19,HRD,Power Query,2026-03-03,Hadir,51,75,Lulus
+TRN-0020,Peserta 20,Sales,Dashboard Excel,2026-03-03,Hadir,58,85,Lulus
+TRN-0021,Peserta 21,IT,Excel Dasar,2026-03-03,Hadir,65,75,Lulus
+TRN-0022,Peserta 22,HRD,Excel Intermediate,2026-03-03,Hadir,72,85,Lulus
+TRN-0023,Peserta 23,Sales,Power Query,2026-03-03,Hadir,79,95,Lulus
+TRN-0024,Peserta 24,IT,Dashboard Excel,2026-03-03,Hadir,46,65,Belum Lulus
+TRN-0025,Peserta 25,HRD,Excel Dasar,2026-03-04,Tidak Hadir,53,75,Belum Lulus
+TRN-0026,Peserta 26,Sales,Excel Intermediate,2026-03-04,Hadir,60,85,Lulus
+TRN-0027,Peserta 27,IT,Power Query,2026-03-04,Hadir,67,95,Lulus
+TRN-0028,Peserta 28,HRD,Dashboard Excel,2026-03-04,Hadir,74,85,Lulus
+TRN-0029,Peserta 29,Sales,Excel Dasar,2026-03-04,Hadir,81,95,Lulus
+TRN-0030,Peserta 30,IT,Excel Intermediate,2026-03-04,Hadir,48,65,Belum Lulus
+TRN-0031,Peserta 31,HRD,Power Query,2026-03-04,Hadir,55,75,Lulus
+TRN-0032,Peserta 32,Sales,Dashboard Excel,2026-03-04,Hadir,62,85,Lulus
+TRN-0033,Peserta 33,IT,Excel Dasar,2026-03-05,Tidak Hadir,69,95,Belum Lulus
+TRN-0034,Peserta 34,HRD,Excel Intermediate,2026-03-05,Hadir,76,100,Lulus
+TRN-0035,Peserta 35,Sales,Power Query,2026-03-05,Hadir,83,95,Lulus
+TRN-0036,Peserta 36,IT,Dashboard Excel,2026-03-05,Hadir,50,65,Belum Lulus
+TRN-0037,Peserta 37,HRD,Excel Dasar,2026-03-05,Hadir,57,75,Lulus
+TRN-0038,Peserta 38,Sales,Excel Intermediate,2026-03-05,Hadir,64,85,Lulus
+TRN-0039,Peserta 39,IT,Power Query,2026-03-05,Hadir,71,95,Lulus
+TRN-0040,Peserta 40,HRD,Dashboard Excel,2026-03-05,Hadir,78,100,Lulus
+TRN-0041,Peserta 41,Sales,Excel Dasar,2026-03-06,Tidak Hadir,45,55,Belum Lulus
+TRN-0042,Peserta 42,IT,Excel Intermediate,2026-03-06,Hadir,52,65,Belum Lulus
+TRN-0043,Peserta 43,HRD,Power Query,2026-03-06,Hadir,59,75,Lulus
+TRN-0044,Peserta 44,Sales,Dashboard Excel,2026-03-06,Hadir,66,85,Lulus
+TRN-0045,Peserta 45,IT,Excel Dasar,2026-03-06,Hadir,73,95,Lulus
+TRN-0046,Peserta 46,HRD,Excel Intermediate,2026-03-06,Hadir,80,100,Lulus
+TRN-0047,Peserta 47,Sales,Power Query,2026-03-06,Hadir,47,75,Lulus
+TRN-0048,Peserta 48,IT,Dashboard Excel,2026-03-06,Hadir,54,65,Belum Lulus
+TRN-0049,Peserta 49,HRD,Excel Dasar,2026-03-07,Tidak Hadir,61,75,Belum Lulus
+TRN-0050,Peserta 50,Sales,Excel Intermediate,2026-03-07,Hadir,68,85,Lulus
+TRN-0051,Peserta 51,IT,Power Query,2026-03-07,Hadir,75,95,Lulus
+TRN-0052,Peserta 52,HRD,Dashboard Excel,2026-03-07,Hadir,82,100,Lulus
+TRN-0053,Peserta 53,Sales,Excel Dasar,2026-03-07,Hadir,49,75,Lulus
+TRN-0054,Peserta 54,IT,Excel Intermediate,2026-03-07,Hadir,56,85,Lulus
+TRN-0055,Peserta 55,HRD,Power Query,2026-03-07,Hadir,63,75,Lulus
+TRN-0056,Peserta 56,Sales,Dashboard Excel,2026-03-07,Hadir,70,85,Lulus
+TRN-0057,Peserta 57,IT,Excel Dasar,2026-03-08,Tidak Hadir,77,95,Belum Lulus
+TRN-0058,Peserta 58,HRD,Excel Intermediate,2026-03-08,Hadir,84,100,Lulus
+TRN-0059,Peserta 59,Sales,Power Query,2026-03-08,Hadir,51,75,Lulus
+TRN-0060,Peserta 60,IT,Dashboard Excel,2026-03-08,Hadir,58,85,Lulus
+TRN-0061,Peserta 61,HRD,Excel Dasar,2026-03-08,Hadir,65,75,Lulus
+TRN-0062,Peserta 62,Sales,Excel Intermediate,2026-03-08,Hadir,72,85,Lulus
+TRN-0063,Peserta 63,IT,Power Query,2026-03-08,Hadir,79,95,Lulus
+TRN-0064,Peserta 64,HRD,Dashboard Excel,2026-03-08,Hadir,46,65,Belum Lulus
+TRN-0065,Peserta 65,Sales,Excel Dasar,2026-03-09,Tidak Hadir,53,75,Belum Lulus
+TRN-0066,Peserta 66,IT,Excel Intermediate,2026-03-09,Hadir,60,85,Lulus
+TRN-0067,Peserta 67,HRD,Power Query,2026-03-09,Hadir,67,95,Lulus
+TRN-0068,Peserta 68,Sales,Dashboard Excel,2026-03-09,Hadir,74,85,Lulus
+TRN-0069,Peserta 69,IT,Excel Dasar,2026-03-09,Hadir,81,95,Lulus
+TRN-0070,Peserta 70,HRD,Excel Intermediate,2026-03-09,Hadir,48,65,Belum Lulus
+TRN-0071,Peserta 71,Sales,Power Query,2026-03-09,Hadir,55,75,Lulus
+TRN-0072,Peserta 72,IT,Dashboard Excel,2026-03-09,Hadir,62,85,Lulus
+TRN-0073,Peserta 73,HRD,Excel Dasar,2026-03-10,Tidak Hadir,69,95,Belum Lulus
+TRN-0074,Peserta 74,Sales,Excel Intermediate,2026-03-10,Hadir,76,100,Lulus
+TRN-0075,Peserta 75,IT,Power Query,2026-03-10,Hadir,83,95,Lulus
+TRN-0076,Peserta 76,HRD,Dashboard Excel,2026-03-10,Hadir,50,65,Belum Lulus
+TRN-0077,Peserta 77,Sales,Excel Dasar,2026-03-10,Hadir,57,75,Lulus
+TRN-0078,Peserta 78,IT,Excel Intermediate,2026-03-10,Hadir,64,85,Lulus
+TRN-0079,Peserta 79,HRD,Power Query,2026-03-10,Hadir,71,95,Lulus
+TRN-0080,Peserta 80,Sales,Dashboard Excel,2026-03-10,Hadir,78,100,Lulus

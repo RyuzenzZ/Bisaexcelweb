@@ -1,4 +1,4 @@
-import { ArrowLeft } from 'lucide-react'
+﻿import { ArrowLeft } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
@@ -8,7 +8,7 @@ export function FeatureNavigation() {
   const navigate = useNavigate()
 
   function handleBack() {
-    navigate(ROUTES.home)
+    navigate(ROUTES.HOME)
   }
 
   return (

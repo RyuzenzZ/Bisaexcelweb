@@ -1,0 +1,357 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Article {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  excerpt     String
+  content     String
+  category    String
+  level       String
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Video {
+  id                 Int      @id @default(autoincrement())
+  title              String
+  slug               String   @unique
+  description        String
+  youtubeUrl         String
+  youtubePlaylistUrl String
+  orderIndex         Int
+  level              String
+  durationLabel      String
+  isExclusive        Boolean  @default(false)
+  isPublished        Boolean  @default(true)
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
+
+model TestExcel {
+  id               Int               @id @default(autoincrement())
+  title            String
+  slug             String            @unique
+  description      String
+  question         String
+  level            String
+  category         String
+  expectedAnswer   String
+  autoCheckType    String
+  estimatedTime    String
+  formulaSkills    Json
+  isPublished      Boolean           @default(true)
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  digitalProducts  DigitalProduct[]
+  testExplanation  TestExplanation?
+}
+
+model DigitalProduct {
+  id            Int        @id @default(autoincrement())
+  relatedTestId Int?
+  relatedTest   TestExcel? @relation(fields: [relatedTestId], references: [id], onDelete: Cascade)
+  type          String
+  title         String
+  slug          String     @unique
+  description   String
+  price         Int
+  accessType    String
+  isActive      Boolean    @default(true)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+}
+
+model TestExplanation {
+  id              Int       @id @default(autoincrement())
+  testId          Int       @unique
+  test            TestExcel @relation(fields: [testId], references: [id], onDelete: Cascade)
+  answerText      String
+  tutorialText    String
+  solutionFileUrl String?
+  isLocked        Boolean   @default(true)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Challenge {
+  id              Int      @id @default(autoincrement())
+  title           String
+  slug            String   @unique
+  description     String
+  sheetLabel      String
+  taskInstruction String
+  level           String
+  category        String
+  estimatedTime   String
+  isPublished     Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Tip {
+  id            Int      @id @default(autoincrement())
+  title         String
+  slug          String   @unique
+  category      String
+  description   String
+  formula       String?
+  pattern       String?
+  exampleInput  String?
+  exampleOutput String?
+  useCase       String
+  level         String
+  tags          Json
+  isPublished   Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Template {
+  id              Int      @id @default(autoincrement())
+  title           String
+  slug            String   @unique
+  description     String
+  category        String
+  targetUser      String
+  features        Json
+  price           Int
+  previewImageUrl String?
+  isPaid          Boolean  @default(true)
+  isPublished     Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model ClassProgram {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  format      String
+  description String
+  targetUser  String
+  topics      Json
+  ctaLabel    String
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model InhouseRequest {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  message   String
+  needType  String
+  status    String   @default("new")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Certificate {
+  id              Int      @id @default(autoincrement())
+  userName        String
+  certificateCode String   @unique
+  testTitle       String
+  score           Int
+  level           String
+  issuedAt        DateTime
+  skills          Json
+  formulaMastered Json
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Portfolio {
+  id              Int      @id @default(autoincrement())
+  username        String   @unique
+  displayName     String
+  summary         String
+  testsCompleted  Int
+  averageScore    Int
+  skills          Json
+  formulaMastered Json
+  certificates    Json
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+model User {
+  id                   String                @id @default(cuid())
+  name                 String
+  username             String                @unique
+  email                String                @unique
+  passwordHash         String
+  avatarUrl            String?
+  role                 String                @default("USER")
+  createdAt            DateTime              @default(now())
+  updatedAt            DateTime              @updatedAt
+  profile              UserProfile?
+  progress             UserProgress?
+  sessions             UserSession[]
+  playAttempts         PlayAttempt[]
+  challengeCompletions ChallengeCompletion[]
+  certificates         UserCertificate[]
+}
+
+model UserProfile {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  bio       String?
+  level     String   @default("Pemula")
+  headline  String?
+  location  String?
+  joinedAt  DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model UserProgress {
+  id                    String   @id @default(cuid())
+  userId                String   @unique
+  level                 String   @default("Pemula")
+  totalScore            Int      @default(0)
+  testsCompleted        Int      @default(0)
+  challengesCompleted   Int      @default(0)
+  competitionsCompleted Int      @default(0)
+  averageScore          Float    @default(0)
+  formulasMastered      Json     @default("[]")
+  skills                Json     @default("[]")
+  rank                  Int?
+  updatedAt             DateTime @updatedAt
+  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model UserSession {
+  id           String   @id @default(cuid())
+  userId       String
+  refreshToken String   @unique
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model PlayAttempt {
+  id              String    @id @default(cuid())
+  userId          String?
+  guestSessionId  String?
+  playCaseId      String
+  slug            String
+  mode            String
+  score           Int
+  totalPoints     Int
+  accuracy        Float
+  correctCount    Int
+  questionCount   Int
+  durationSeconds Int?
+  completedAt     DateTime?
+  rankPoints      Int?
+  isSaved         Boolean   @default(false)
+  answers         Json
+  answerRows      PlayAttemptAnswer[]
+  skillsEarned    Json      @default("[]")
+  formulasEarned  Json      @default("[]")
+  startedAt       DateTime?
+  submittedAt     DateTime  @default(now())
+  user            User?     @relation(fields: [userId], references: [id], onDelete: SetNull)
+}
+
+
+model PlayCase {
+  id               String         @id @default(cuid())
+  slug             String         @unique
+  title            String
+  subtitle         String?
+  description      String
+  category         String?
+  mode             String         @default("practice")
+  difficulty       String         @default("dasar")
+  level            String         @default("dasar")
+  estimatedMinutes Int            @default(30)
+  basePoints       Int            @default(100)
+  isPublished      Boolean        @default(true)
+  isPremium        Boolean        @default(false)
+  hasDownload      Boolean        @default(false)
+  downloadUrl      String?
+  workbookSheets   Json?
+  tags             Json?
+  skills           Json?
+  heroCopy         String?
+  instruction      String?
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  questions        PlayQuestion[]
+}
+
+model PlayQuestion {
+  id              String   @id @default(cuid())
+  playCaseId      String
+  playCase        PlayCase @relation(fields: [playCaseId], references: [id], onDelete: Cascade)
+  order           Int
+  questionText    String
+  helperText      String?
+  type            String   @default("number")
+  difficulty      String   @default("dasar")
+  points          Int      @default(10)
+  correctAnswer   String
+  acceptedAnswers Json?
+  tolerance       Float?
+  explanation     String?
+  formulaHint     String?
+  skill           String?
+  levelLabel      String?
+  isPublished     Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model PlayAttemptAnswer {
+  id            String      @id @default(cuid())
+  attemptId     String
+  attempt       PlayAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  questionId    String?
+  questionText  String
+  userAnswer    String?
+  correctAnswer String?
+  isCorrect     Boolean
+  pointsEarned  Int         @default(0)
+  maxPoints     Int         @default(0)
+  explanation   String?
+  createdAt     DateTime    @default(now())
+}
+model ChallengeCompletion {
+  id           String   @id @default(cuid())
+  userId       String
+  challengeId  String
+  slug         String
+  status       String   @default("completed")
+  skillsEarned Json     @default("[]")
+  completedAt  DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model UserCertificate {
+  id                  String   @id @default(cuid())
+  userId              String
+  certificateCode     String   @unique
+  title               String
+  level               String
+  score               Int
+  formulaMastered     Json     @default("[]")
+  skillEvidence       Json     @default("[]")
+  relatedPlayCases    Json     @default("[]")
+  completedTests      Int      @default(0)
+  completedChallenges Int      @default(0)
+  accuracy            Float    @default(0)
+  issuedAt            DateTime @default(now())
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

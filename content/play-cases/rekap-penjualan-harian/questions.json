@@ -1,0 +1,102 @@
+{
+  "caseSlug": "rekap-penjualan-harian",
+  "title": "Rekap Penjualan Harian",
+  "questions": [
+    {
+      "id": "rp-001",
+      "level": 1,
+      "questionText": "Berapa total transaksi pada dataset?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 10,
+      "formulaSkills": [
+        "COUNT",
+        "membaca dataset"
+      ],
+      "hint": "Hitung jumlah baris transaksi."
+    },
+    {
+      "id": "rp-002",
+      "level": 2,
+      "questionText": "Berapa total omzet bersih seluruh transaksi setelah diskon?",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 15,
+      "formulaSkills": [
+        "SUM",
+        "perkalian",
+        "diskon"
+      ],
+      "hint": "Gunakan Qty, Harga Satuan, dan Diskon."
+    },
+    {
+      "id": "rp-003",
+      "level": 3,
+      "questionText": "Produk apa yang memiliki total omzet bersih tertinggi?",
+      "inputType": "manual_input",
+      "answerType": "text",
+      "points": 20,
+      "formulaSkills": [
+        "SUMIF",
+        "rekap per produk"
+      ],
+      "hint": "Buat rekap omzet per produk."
+    },
+    {
+      "id": "rp-004",
+      "level": 4,
+      "questionText": "Rumus apa yang paling tepat untuk menghitung total penjualan per produk?",
+      "inputType": "multiple_choice",
+      "answerType": "choice",
+      "choices": [
+        {
+          "label": "SUM",
+          "value": "SUM"
+        },
+        {
+          "label": "SUMIF",
+          "value": "SUMIF"
+        },
+        {
+          "label": "COUNTIF",
+          "value": "COUNTIF"
+        },
+        {
+          "label": "AVERAGE",
+          "value": "AVERAGE"
+        }
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "SUMIF"
+      ],
+      "hint": "Butuh penjumlahan dengan kriteria produk."
+    },
+    {
+      "id": "rp-005",
+      "level": 5,
+      "questionText": "Berapa persen growth omzet dari hari pertama ke hari terakhir? Bulatkan 2 angka desimal dan gunakan format persen.",
+      "inputType": "manual_input",
+      "answerType": "number",
+      "points": 25,
+      "formulaSkills": [
+        "growth calculation",
+        "SUMIF tanggal"
+      ],
+      "hint": "Bandingkan total omzet tanggal terakhir dengan tanggal pertama."
+    },
+    {
+      "id": "rp-bonus",
+      "level": "bonus",
+      "questionText": "Siapa sales dengan total omzet bersih tertinggi?",
+      "inputType": "manual_input",
+      "answerType": "text",
+      "points": 10,
+      "formulaSkills": [
+        "SUMIF",
+        "ranking sales"
+      ],
+      "hint": "Buat rekap omzet per sales."
+    }
+  ]
+}

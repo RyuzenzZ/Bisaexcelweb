@@ -1,0 +1,74 @@
+{
+  "caseSlug": "tes-excel-staff-admin",
+  "questions": [
+    {
+      "questionId": "sa-001",
+      "correctAnswer": "171",
+      "acceptedAnswers": [
+        "171"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "SUM"
+      ]
+    },
+    {
+      "questionId": "sa-002",
+      "correctAnswer": "25",
+      "acceptedAnswers": [
+        "25"
+      ],
+      "points": 15,
+      "formulaSkills": [
+        "COUNTIF"
+      ]
+    },
+    {
+      "questionId": "sa-003",
+      "correctAnswer": "15200000",
+      "acceptedAnswers": [
+        "15200000",
+        "Rp 15.200.000",
+        "15200000"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "SUMPRODUCT"
+      ]
+    },
+    {
+      "questionId": "sa-004",
+      "correctAnswer": "COUNTIF",
+      "acceptedAnswers": [
+        "COUNTIF"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "COUNTIF"
+      ]
+    },
+    {
+      "questionId": "sa-005",
+      "correctAnswer": "36",
+      "acceptedAnswers": [
+        "36"
+      ],
+      "points": 25,
+      "formulaSkills": [
+        "SUMIF"
+      ]
+    },
+    {
+      "questionId": "sa-bonus",
+      "correctAnswer": "304000.0",
+      "acceptedAnswers": [
+        "304000.0",
+        "304000"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "AVERAGE"
+      ]
+    }
+  ]
+}

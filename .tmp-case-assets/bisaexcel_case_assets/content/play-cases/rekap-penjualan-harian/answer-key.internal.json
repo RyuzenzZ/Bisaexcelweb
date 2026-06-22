@@ -1,0 +1,84 @@
+{
+  "caseSlug": "rekap-penjualan-harian",
+  "questions": [
+    {
+      "questionId": "rp-001",
+      "correctAnswer": "60",
+      "acceptedAnswers": [
+        "60",
+        "60 transaksi"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "COUNT",
+        "membaca dataset"
+      ]
+    },
+    {
+      "questionId": "rp-002",
+      "correctAnswer": "4148700",
+      "acceptedAnswers": [
+        "4148700",
+        "Rp 4.148.700",
+        "4148700"
+      ],
+      "points": 15,
+      "formulaSkills": [
+        "SUM",
+        "perkalian",
+        "diskon"
+      ]
+    },
+    {
+      "questionId": "rp-003",
+      "correctAnswer": "Matcha Latte",
+      "acceptedAnswers": [
+        "Matcha Latte",
+        "matcha latte"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "SUMIF",
+        "rekap per produk"
+      ]
+    },
+    {
+      "questionId": "rp-004",
+      "correctAnswer": "SUMIF",
+      "acceptedAnswers": [
+        "SUMIF"
+      ],
+      "points": 20,
+      "formulaSkills": [
+        "SUMIF"
+      ]
+    },
+    {
+      "questionId": "rp-005",
+      "correctAnswer": "16.60%",
+      "acceptedAnswers": [
+        "16.60%",
+        "16,60%",
+        "16.6"
+      ],
+      "points": 25,
+      "formulaSkills": [
+        "growth calculation",
+        "SUMIF tanggal"
+      ]
+    },
+    {
+      "questionId": "rp-bonus",
+      "correctAnswer": "Dimas",
+      "acceptedAnswers": [
+        "Dimas",
+        "dimas"
+      ],
+      "points": 10,
+      "formulaSkills": [
+        "SUMIF",
+        "ranking sales"
+      ]
+    }
+  ]
+}
