@@ -1,4 +1,4 @@
-{
+﻿{
     "name":  "bisaexcel-backend",
     "version":  "0.1.0",
     "private":  true,
@@ -6,7 +6,7 @@
     "scripts":  {
                     "dev":  "tsx watch src/server.ts",
                     "build":  "tsc",
-                    "start":  "node dist/server.js",
+                    "start":  "node dist/src/server.js",
                     "prisma:migrate":  "prisma migrate dev",
                     "prisma:seed":  "tsx prisma/seed.ts",
                     "prisma:studio":  "prisma studio",
@@ -31,3 +31,4 @@
                             "typescript":  "^6.0.3"
                         }
 }
+
