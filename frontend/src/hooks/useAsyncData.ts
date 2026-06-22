@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect, useState, type DependencyList } from 'react'
+import { useCallback, useEffect, useRef, useState, type DependencyList } from 'react'
 import type { DataResult } from '@/services/apiClient'
 
 type AsyncState<T> = {
@@ -15,6 +15,11 @@ export function useAsyncData<T>(loader: () => Promise<DataResult<T>>, deps: Depe
   const [isFallback, setIsFallback] = useState(false)
   const [error, setError] = useState<string | undefined>()
   const [version, setVersion] = useState(0)
+  const loaderRef = useRef(loader)
+
+  useEffect(() => {
+    loaderRef.current = loader
+  }, [loader])
 
   const reload = useCallback(() => setVersion((current) => current + 1), [])
 
@@ -22,12 +27,16 @@ export function useAsyncData<T>(loader: () => Promise<DataResult<T>>, deps: Depe
     let active = true
     setIsLoading(true)
 
-    loader()
+    loaderRef.current()
       .then((result) => {
         if (!active) return
         setData(result.data)
         setIsFallback(result.source === 'fallback')
         setError(result.error)
+      })
+      .catch((caughtError: unknown) => {
+        if (!active) return
+        setError(caughtError instanceof Error ? caughtError.message : 'Gagal memuat data.')
       })
       .finally(() => {
         if (active) setIsLoading(false)
@@ -36,7 +45,7 @@ export function useAsyncData<T>(loader: () => Promise<DataResult<T>>, deps: Depe
     return () => {
       active = false
     }
-  }, [loader, version, ...deps])
+  }, [version, ...deps])
 
   return { data, isLoading, isFallback, error, reload }
 }

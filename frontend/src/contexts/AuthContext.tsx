@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { authService, clearStoredToken, getStoredToken, type AuthPayload, type LoginInput, type RegisterInput } from '@/services/authService'
 
 type AuthContextValue = {
@@ -19,12 +19,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [payload, setPayload] = useState<AuthPayload | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
-  async function refreshMe() {
+  const refreshMe = useCallback(async () => {
     if (!getStoredToken()) {
       setPayload(null)
       setIsLoading(false)
       return
     }
+
     try {
       setPayload(await authService.me())
     } catch {
@@ -33,10 +34,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } finally {
       setIsLoading(false)
     }
-  }
+  }, [])
 
   useEffect(() => {
     void refreshMe()
+  }, [refreshMe])
+
+  const login = useCallback(async (input: LoginInput) => {
+    setPayload(await authService.login(input))
+  }, [])
+
+  const register = useCallback(async (input: RegisterInput) => {
+    setPayload(await authService.register(input))
+  }, [])
+
+  const logout = useCallback(async () => {
+    await authService.logout()
+    setPayload(null)
   }, [])
 
   const value = useMemo<AuthContextValue>(() => ({
@@ -45,18 +59,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     progress: payload?.progress ?? null,
     isAuthenticated: Boolean(payload?.user),
     isLoading,
-    async login(input) {
-      setPayload(await authService.login(input))
-    },
-    async register(input) {
-      setPayload(await authService.register(input))
-    },
-    async logout() {
-      await authService.logout()
-      setPayload(null)
-    },
+    login,
+    register,
+    logout,
     refreshMe,
-  }), [isLoading, payload])
+  }), [isLoading, login, logout, payload, refreshMe, register])
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }

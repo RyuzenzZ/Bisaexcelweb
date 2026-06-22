@@ -36,9 +36,8 @@ export function DashboardPage() {
     }).finally(() => {
       if (active) setIsLoading(false)
     })
-    void refreshMe()
     return () => { active = false }
-  }, [refreshMe, version])
+  }, [version])
 
   async function handleGenerateCertificate() {
     setIsGenerating(true)

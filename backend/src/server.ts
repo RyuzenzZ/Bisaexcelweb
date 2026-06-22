@@ -1,4 +1,4 @@
-﻿import cors from 'cors'
+import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
 import { errorHandler, notFoundHandler } from './middlewares/errorHandler.js'
@@ -14,6 +14,8 @@ const allowedOrigins = new Set([
   'http://127.0.0.1:3000',
   'http://localhost:3001',
   'http://127.0.0.1:3001',
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
 ])
 
 app.use(cors({
