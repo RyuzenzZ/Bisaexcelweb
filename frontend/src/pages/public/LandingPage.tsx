@@ -1,4 +1,4 @@
-﻿import { ArrowRight, BadgeCheck, BarChart3, BookOpen, BriefcaseBusiness, Building2, CheckCircle2, FileSpreadsheet, GraduationCap, Lightbulb, LineChart, Linkedin, PlayCircle, Sparkles, Target, Users, Wrench, Youtube } from 'lucide-react'
+import { ArrowRight, BadgeCheck, BarChart3, BookOpen, BriefcaseBusiness, Building2, CheckCircle2, FileSpreadsheet, GraduationCap, Lightbulb, LineChart, Linkedin, PlayCircle, Sparkles, Target, Users, Wrench, Youtube } from 'lucide-react'
 import type { ComponentType, ReactNode } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -125,7 +125,7 @@ export function LandingPage() {
 function HeroSection() {
   return (
     <section className="hero-grid pt-28 sm:pt-32">
-      <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:pb-24">
+      <div className="motion-page mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:pb-24">
         <div className="max-w-4xl">
           <span className="inline-flex rounded-full border border-green-700/50 bg-green-950/60 px-3 py-1.5 text-xs font-bold text-green-300">Belajar Excel dalam Bahasa Indonesia</span>
           <h1 className="mt-6 max-w-4xl font-display text-5xl font-bold leading-tight text-[#E8F0EA] sm:text-6xl lg:text-7xl">Kuasai Excel, Kuasai Karirmu</h1>
@@ -148,7 +148,7 @@ function WhySection() {
         <SectionHeading eyebrow="Kenapa" title="Kenapa BisaExcel Dibuat?" description="Excel dipakai hampir di semua pekerjaan, tapi banyak orang belajar Excel secara acak: menonton tutorial terpisah, menghafal rumus tanpa konteks, lalu bingung saat harus mengerjakan data kerja yang sebenarnya." />
         <div>
           <p className="text-base leading-8 text-[#8BA98F]">BisaExcel hadir untuk membantu kamu belajar Excel dengan alur yang lebih jelas: mulai dari dasar, memahami rumus penting, latihan dari file kasus, sampai mengukur kemampuan lewat test.</p>
-          <div className="mt-6 grid gap-4 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+          <div className="motion-stagger mt-6 grid gap-4 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
             {problemCards.map((item) => <InfoCard key={item.title} title={item.title} body={item.body} />)}
           </div>
         </div>
@@ -162,7 +162,7 @@ function WhatIsSection() {
     <SectionFrame tone="muted">
       <SectionHeading eyebrow="Platform" title="Apa Itu BisaExcel?" description="BisaExcel.com adalah platform belajar Microsoft Excel dalam Bahasa Indonesia yang membantu kamu memahami rumus, fungsi, tabel, pivot, lookup, dashboard, dan fitur penting Excel lainnya secara lebih terarah." />
       <p className="mt-5 max-w-3xl text-base leading-8 text-[#8BA98F]">Di sini kamu bisa belajar lewat video, membaca materi, mencoba latihan, mengunduh file kasus, mengikuti test Excel, dan melihat progress kemampuanmu dari waktu ke waktu.</p>
-      <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <div className="motion-stagger mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {productPillars.map((pillar) => <IconCard key={pillar.title} item={pillar} />)}
       </div>
     </SectionFrame>
@@ -173,7 +173,7 @@ function AudienceSection() {
   return (
     <SectionFrame>
       <SectionHeading eyebrow="Pengguna" title="BisaExcel Cocok Untuk Siapa?" description="BisaExcel dibuat untuk orang yang ingin belajar Excel dengan alur praktis, bukan sekadar mengumpulkan rumus tanpa konteks kerja." />
-      <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div className="motion-stagger mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {audiences.map((item) => <IconCard key={item.title} item={item} />)}
       </div>
     </SectionFrame>
@@ -185,9 +185,9 @@ function SkillsSection() {
     <SectionFrame tone="muted">
       <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <SectionHeading eyebrow="Materi" title="Apa yang Bisa Kamu Pelajari?" description="Materi belajar Excel dibuat agar kamu tidak hanya tahu rumus, tapi juga paham cara memakai Excel untuk menyelesaikan pekerjaan nyata." />
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="motion-stagger grid gap-3 sm:grid-cols-2">
           {skills.map((skill) => (
-            <div className="flex items-start gap-3 rounded-xl border border-[#1E3022] bg-[#111E14] px-4 py-3" key={skill}>
+            <div className="motion-card flex items-start gap-3 rounded-xl border border-[#1E3022] bg-[#111E14] px-4 py-3" key={skill}>
               <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-green-400" />
               <span className="text-sm leading-6 text-[#E8F0EA]">{skill}</span>
             </div>
@@ -202,9 +202,9 @@ function LearningFlowSection() {
   return (
     <SectionFrame id="alur-belajar">
       <SectionHeading eyebrow="Alur" title="Alur Belajar yang Lebih Jelas" description="Mulai dari dasar, naik ke rumus penting, lalu latihan lewat file kasus dan test Excel agar progress belajar lebih terlihat." />
-      <div className="mt-10 grid gap-4 lg:grid-cols-5">
+      <div className="motion-stagger mt-10 grid gap-4 lg:grid-cols-5">
         {learningSteps.map((step, index) => (
-          <div className="rounded-2xl border border-[#1E3022] bg-[#111E14] p-5 shadow-card" key={step.title}>
+          <div className="motion-card rounded-2xl border border-[#1E3022] bg-[#111E14] p-5 shadow-card" key={step.title}>
             <span className="font-display text-3xl font-bold text-green-400">{index + 1}</span>
             <h3 className="mt-4 font-heading text-lg font-bold text-[#E8F0EA]">{step.title}</h3>
             <p className="mt-2 text-sm leading-6 text-[#8BA98F]">{step.body}</p>
@@ -219,15 +219,15 @@ function FeaturesSection() {
   return (
     <SectionFrame tone="muted">
       <SectionHeading eyebrow="Fitur" title="Fitur Utama BisaExcel" description="Fitur detail seperti Test Excel, Excel Tips, Video, Template, dan Kelas diperkenalkan singkat agar homepage tetap clean dan mudah dipahami." />
-      <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div className="motion-stagger mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {features.map((feature) => {
           const Icon = feature.icon
           return (
-            <Link className="group rounded-2xl border border-[#1E3022] bg-[#111E14] p-5 shadow-card transition-colors hover:border-[#254A2A] hover:bg-[#162419]" key={feature.title} to={feature.to}>
-              <Icon className="h-7 w-7 text-green-400" />
+            <Link className="motion-card group rounded-2xl border border-[#1E3022] bg-[#111E14] p-5 shadow-card transition-colors hover:border-[#254A2A] hover:bg-[#162419]" key={feature.title} to={feature.to}>
+              <Icon className="motion-icon h-7 w-7 text-green-400" />
               <h3 className="mt-4 font-heading text-lg font-bold text-[#E8F0EA]">{feature.title}</h3>
               <p className="mt-2 text-sm leading-6 text-[#8BA98F]">{feature.body}</p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-green-400 group-hover:text-green-300">Pelajari fitur ini<ArrowRight className="h-4 w-4" /></span>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-green-400 group-hover:text-green-300">Pelajari fitur ini<ArrowRight className="motion-icon h-4 w-4" /></span>
             </Link>
           )
         })}
@@ -241,9 +241,9 @@ function GamificationSection() {
     <SectionFrame>
       <div className="grid gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
         <SectionHeading eyebrow="Progress" title="Belajar Lebih Terarah, Progress Lebih Terlihat" description="BisaExcel juga menyiapkan elemen gamifikasi seperti XP, level, badge, streak, dan leaderboard agar proses belajar terasa lebih hidup. Kamu bisa melihat perkembangan skill dari waktu ke waktu, bukan sekadar menonton materi lalu lupa." />
-        <div className="rounded-2xl border border-[#254A2A] bg-[#111E14] p-5 shadow-card">
-          <div className="grid gap-3 sm:grid-cols-2">
-            {gamificationPoints.map((point) => <span className="rounded-xl border border-[#1E3022] bg-[#0D1610] px-4 py-3 text-sm font-semibold text-[#E8F0EA]" key={point}>{point}</span>)}
+        <div className="motion-card rounded-2xl border border-[#254A2A] bg-[#111E14] p-5 shadow-card">
+          <div className="motion-stagger grid gap-3 sm:grid-cols-2">
+            {gamificationPoints.map((point) => <span className="motion-card rounded-xl border border-[#1E3022] bg-[#0D1610] px-4 py-3 text-sm font-semibold text-[#E8F0EA]" key={point}>{point}</span>)}
           </div>
         </div>
       </div>
@@ -277,7 +277,7 @@ function MentorProfileCard() {
   const [bannerImageFailed, setBannerImageFailed] = useState(false)
 
   return (
-    <div className="rounded-2xl border border-[#254A2A] bg-[#111E14] p-5 shadow-card">
+    <div className="motion-card rounded-2xl border border-[#254A2A] bg-[#111E14] p-5 shadow-card">
       <div className="overflow-hidden rounded-2xl border border-[#1E3022] bg-[#0D1610] shadow-[0_18px_60px_rgba(0,0,0,.35)]">
         {!bannerImageFailed ? (
           <img
@@ -315,7 +315,7 @@ function MentorProfileCard() {
           <h3 className="font-heading text-xl font-bold text-[#E8F0EA]">{mentorProfile.name}</h3>
           <p className="mt-1 text-sm font-semibold text-green-300">Certified Trainer BNSP</p>
           <p className="mt-3 text-sm leading-6 text-[#8BA98F]">10+ Tahun di Dunia Training</p>
-          <p className="text-sm leading-6 text-[#8BA98F]">People Development • Excel Enthusiast</p>
+          <p className="text-sm leading-6 text-[#8BA98F]">People Development � Excel Enthusiast</p>
           <p className="mt-3 text-sm text-[#8BA98F]">{mentorProfile.location}</p>
           <div className="mt-4 flex flex-wrap gap-2 text-xs text-[#8BA98F]">
             <span className="rounded-full border border-[#254A2A] px-2.5 py-1">{mentorProfile.followers}</span>
@@ -328,7 +328,7 @@ function MentorProfileCard() {
 }
 function FinalCtaSection() {
   return (
-    <section className="bg-[#0D1610] py-16 lg:py-24">
+    <section className="motion-section bg-[#0D1610] py-16 lg:py-24">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
         <BadgeCheck className="mx-auto h-10 w-10 text-green-400" />
         <h2 className="mt-5 font-display text-4xl font-bold text-[#E8F0EA]">Mulai Belajar Excel dengan Alur yang Lebih Jelas</h2>
@@ -343,7 +343,7 @@ function FinalCtaSection() {
 }
 
 function SectionFrame({ children, tone = 'default', id }: { children: ReactNode; tone?: 'default' | 'muted'; id?: string }) {
-  return <section className={tone === 'muted' ? 'bg-[#0D1610] py-16 lg:py-24' : 'py-16 lg:py-24'} id={id}><div className="mx-auto max-w-7xl px-4 sm:px-6">{children}</div></section>
+  return <section className={tone === 'muted' ? 'motion-section bg-[#0D1610] py-16 lg:py-24' : 'motion-section py-16 lg:py-24'} id={id}><div className="mx-auto max-w-7xl px-4 sm:px-6">{children}</div></section>
 }
 
 function SectionHeading({ eyebrow, title, description }: { eyebrow: string; title: string; description: string }) {
@@ -351,12 +351,12 @@ function SectionHeading({ eyebrow, title, description }: { eyebrow: string; titl
 }
 
 function InfoCard({ title, body }: { title: string; body: string }) {
-  return <div className="rounded-2xl border border-[#1E3022] bg-[#111E14] p-5 shadow-card"><h3 className="font-heading text-lg font-bold text-[#E8F0EA]">{title}</h3><p className="mt-2 text-sm leading-6 text-[#8BA98F]">{body}</p></div>
+  return <div className="motion-card rounded-2xl border border-[#1E3022] bg-[#111E14] p-5 shadow-card"><h3 className="font-heading text-lg font-bold text-[#E8F0EA]">{title}</h3><p className="mt-2 text-sm leading-6 text-[#8BA98F]">{body}</p></div>
 }
 
 function IconCard({ item }: { item: { title: string; body: string; icon: ComponentType<{ className?: string }> } }) {
   const Icon = item.icon
-  return <div className="rounded-2xl border border-[#1E3022] bg-[#111E14] p-5 shadow-card"><Icon className="h-7 w-7 text-green-400" /><h3 className="mt-4 font-heading text-lg font-bold text-[#E8F0EA]">{item.title}</h3><p className="mt-2 text-sm leading-6 text-[#8BA98F]">{item.body}</p></div>
+  return <div className="motion-card rounded-2xl border border-[#1E3022] bg-[#111E14] p-5 shadow-card"><Icon className="motion-icon h-7 w-7 text-green-400" /><h3 className="mt-4 font-heading text-lg font-bold text-[#E8F0EA]">{item.title}</h3><p className="mt-2 text-sm leading-6 text-[#8BA98F]">{item.body}</p></div>
 }
 
 

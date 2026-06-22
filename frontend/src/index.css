@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -93,5 +93,98 @@
       72px 72px,
       auto;
   }
-}
+  .motion-page {
+    animation: be-fade-up 420ms cubic-bezier(.2, .8, .2, 1) both;
+  }
 
+  .motion-section {
+    animation: be-fade-up 520ms cubic-bezier(.2, .8, .2, 1) both;
+  }
+
+  .motion-card {
+    transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+    will-change: transform;
+  }
+
+  .motion-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, .34);
+  }
+
+  .motion-icon {
+    transition: transform 180ms ease, color 180ms ease;
+  }
+
+  .motion-card:hover .motion-icon,
+  .group:hover .motion-icon {
+    transform: translateY(-2px);
+  }
+
+  .motion-stagger > * {
+    animation: be-fade-up 460ms cubic-bezier(.2, .8, .2, 1) both;
+  }
+
+  .motion-stagger > *:nth-child(1) { animation-delay: 40ms; }
+  .motion-stagger > *:nth-child(2) { animation-delay: 80ms; }
+  .motion-stagger > *:nth-child(3) { animation-delay: 120ms; }
+  .motion-stagger > *:nth-child(4) { animation-delay: 160ms; }
+  .motion-stagger > *:nth-child(5) { animation-delay: 200ms; }
+  .motion-stagger > *:nth-child(6) { animation-delay: 240ms; }
+  .motion-stagger > *:nth-child(n+7) { animation-delay: 280ms; }
+
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #0D1610 0%, #142318 45%, #0D1610 100%);
+    background-size: 220% 100%;
+    animation: be-shimmer 1.4s ease-in-out infinite;
+  }
+
+  .progress-animate {
+    animation: be-progress 700ms cubic-bezier(.2, .8, .2, 1) both;
+    transform-origin: left center;
+  }
+
+  @supports (animation-timeline: view()) {
+    .motion-section {
+      animation-timeline: view();
+      animation-range: entry 8% cover 28%;
+    }
+  }
+
+  @keyframes be-fade-up {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes be-shimmer {
+    0% { background-position: 120% 0; }
+    100% { background-position: -120% 0; }
+  }
+
+  @keyframes be-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    .motion-page,
+    .motion-section,
+    .motion-stagger > *,
+    .skeleton-shimmer,
+    .progress-animate {
+      animation: none !important;
+    }
+
+    .motion-card,
+    .motion-icon,
+    .motion-card:hover,
+    .motion-card:hover .motion-icon,
+    .group:hover .motion-icon {
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+}

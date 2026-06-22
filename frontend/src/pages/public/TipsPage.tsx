@@ -78,7 +78,7 @@ export function TipsPage() {
     <PublicLayout>
       <PageMeta title="Excel Tips" />
       <section className="hero-grid pt-28 sm:pt-32">
-        <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
+        <div className="motion-page mx-auto max-w-7xl px-4 pb-20 sm:px-6">
           <div className="mx-auto max-w-4xl text-center">
             <span className="inline-flex rounded-full border border-green-700/50 bg-green-950/60 px-3 py-1 text-xs font-bold text-green-300">Excel Tips</span>
             <h1 className="mt-5 font-display text-4xl font-bold leading-tight text-[#E8F0EA] sm:text-6xl">Excel Tips: Rumus, LAMBDA, REGEX, dan Shortcut Buat Kerja Lebih Cepat</h1>
@@ -124,13 +124,13 @@ export function TipsPage() {
                 </div>
 
                 {filteredTips.length ? (
-                  <div className="mt-5 grid gap-4 md:grid-cols-2">
+                  <div className="motion-stagger mt-5 grid gap-4 md:grid-cols-2">
                     {filteredTips.map((tip) => <TipCard key={tip.slug} tip={tip} />)}
                   </div>
                 ) : <div className="mt-5"><EmptyState title="Excel Tips tidak ditemukan" message="Coba kata kunci lain seperti SUMIFS, margin, CPL, email, nomor WA, invoice, LAMBDA, REGEX, atau shortcut." icon={Search} /></div>}
               </div>
 
-              <aside className="h-fit rounded-2xl border border-[#254A2A] bg-[#111E14] p-6 shadow-card">
+              <aside className="motion-card h-fit rounded-2xl border border-[#254A2A] bg-[#111E14] p-6 shadow-card">
                 <Briefcase className="h-8 w-8 text-amber-400" />
                 <h2 className="mt-4 font-heading text-2xl font-bold">Fokus kerja nyata</h2>
                 <p className="mt-3 text-sm leading-6 text-[#8BA98F]">Satu tempat untuk mencari rumus bisnis, pattern REGEX, fungsi LAMBDA, shortcut, dan kebiasaan workbook yang lebih rapi.</p>
@@ -158,7 +158,7 @@ function TipCard({ tip }: { tip: ExcelTip }) {
   const displayValue = getDisplayValue(tip)
 
   return (
-    <Link className="rounded-2xl border border-[#1E3022] bg-[#111E14] p-5 shadow-card transition-all hover:-translate-y-1 hover:border-[#254A2A] hover:bg-[#162419]" to={ROUTES.EXCEL_TIP_DETAIL(tip.slug)}>
+    <Link className="motion-card rounded-2xl border border-[#1E3022] bg-[#111E14] p-5 shadow-card transition-all hover:border-[#254A2A] hover:bg-[#162419]" to={ROUTES.EXCEL_TIP_DETAIL(tip.slug)}>
       <div className="flex flex-wrap items-center gap-2">
         <span className="rounded-full border border-[#254A2A] bg-[#0D1610] px-2.5 py-1 text-xs font-semibold text-green-300">{categoryLabels[tip.category]}</span>
         <span className="rounded-full border border-[#254A2A] bg-[#0D1610] px-2.5 py-1 text-xs font-semibold text-[#8BA98F]">{tip.level}</span>
@@ -173,7 +173,7 @@ function TipCard({ tip }: { tip: ExcelTip }) {
       <div className="mt-4 flex flex-wrap gap-2">
         {tip.tags.slice(0, 3).map((tag) => <span className="rounded-full bg-green-600/10 px-2.5 py-1 text-xs font-semibold text-green-300" key={tag}>{tag}</span>)}
       </div>
-      <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-green-400">Lihat detail <ArrowRight className="h-4 w-4" /></span>
+      <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-green-400">Lihat detail <ArrowRight className="motion-icon h-4 w-4" /></span>
     </Link>
   )
 }

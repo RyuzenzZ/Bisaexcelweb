@@ -68,7 +68,7 @@ export function DashboardPage() {
   return (
     <DashboardLayout>
       <PageMeta title="Dashboard" />
-      {isLoading ? <LoadingState label="Memuat dashboard kamu..." /> : null}
+      {isLoading ? <DashboardSkeleton /> : null}
       {!isLoading ? (
         <section className="space-y-6">
           {error ? <Notice tone="warning">{error}</Notice> : null}
@@ -237,20 +237,55 @@ export function AccountSettingsPage() {
   )
 }
 
+function DashboardSkeleton() {
+  return (
+    <section className="motion-page space-y-6">
+      <div className="rounded-2xl border border-[#254A2A] bg-[#111E14] p-6 shadow-card">
+        <div className="skeleton-shimmer h-4 w-36 rounded-full" />
+        <div className="skeleton-shimmer mt-4 h-8 w-64 max-w-full rounded-full" />
+        <div className="skeleton-shimmer mt-4 h-3 w-full max-w-2xl rounded-full" />
+        <div className="skeleton-shimmer mt-3 h-3 w-3/4 max-w-xl rounded-full" />
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-5">
+        {Array.from({ length: 5 }).map((_, index) => (
+          <div className="rounded-2xl border border-[#1E3022] bg-[#111E14] p-5" key={index}>
+            <div className="skeleton-shimmer h-3 w-20 rounded-full" />
+            <div className="skeleton-shimmer mt-4 h-7 w-24 rounded-full" />
+          </div>
+        ))}
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        {[0, 1].map((item) => (
+          <div className="rounded-2xl border border-[#1E3022] bg-[#111E14] p-6" key={item}>
+            <div className="skeleton-shimmer h-5 w-48 rounded-full" />
+            <div className="mt-5 flex flex-wrap gap-2">
+              <div className="skeleton-shimmer h-8 w-24 rounded-full" />
+              <div className="skeleton-shimmer h-8 w-32 rounded-full" />
+              <div className="skeleton-shimmer h-8 w-28 rounded-full" />
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function DashboardHeader({ icon: Icon, title, description }: { icon: typeof BookOpen; title: string; description: string }) {
-  return <section className="mb-6 rounded-2xl border border-[#254A2A] bg-[#111E14] p-6 shadow-card"><Icon className="h-8 w-8 text-green-400" /><h1 className="mt-4 font-heading text-3xl font-bold">{title}</h1><p className="mt-2 max-w-2xl text-sm leading-6 text-[#8BA98F]">{description}</p></section>
+  return <section className="motion-page mb-6 rounded-2xl border border-[#254A2A] bg-[#111E14] p-6 shadow-card"><Icon className="h-8 w-8 text-green-400" /><h1 className="mt-4 font-heading text-3xl font-bold">{title}</h1><p className="mt-2 max-w-2xl text-sm leading-6 text-[#8BA98F]">{description}</p></section>
 }
 
 function Panel({ title, children }: { title: string; children: ReactNode }) {
-  return <div className="rounded-2xl border border-[#1E3022] bg-[#111E14] p-6"><h3 className="font-heading text-xl font-bold">{title}</h3><div className="mt-4">{children}</div></div>
+  return <div className="motion-card rounded-2xl border border-[#1E3022] bg-[#111E14] p-6"><h3 className="font-heading text-xl font-bold">{title}</h3><div className="mt-4">{children}</div></div>
 }
 
 function StatsGrid({ progress, rank }: { progress?: AuthProgress | null; rank: number | null }) {
-  return <div className="grid gap-4 md:grid-cols-5"><Stat label="Level" value={progress?.level ?? 'Pemula'} /><Stat label="Total skor" value={String(progress?.totalScore ?? 0)} /><Stat label="Test selesai" value={String(progress?.testsCompleted ?? 0)} /><Stat label="Challenge" value={String(progress?.challengesCompleted ?? 0)} /><Stat label="Ranking" value={rank ? `#${rank}` : '-'} /></div>
+  return <div className="motion-stagger grid gap-4 md:grid-cols-5"><Stat label="Level" value={progress?.level ?? 'Pemula'} /><Stat label="Total skor" value={String(progress?.totalScore ?? 0)} /><Stat label="Test selesai" value={String(progress?.testsCompleted ?? 0)} /><Stat label="Challenge" value={String(progress?.challengesCompleted ?? 0)} /><Stat label="Ranking" value={rank ? `#${rank}` : '-'} /></div>
 }
 
 function Stat({ label, value }: { label: string; value: string }) {
-  return <div className="rounded-2xl border border-[#1E3022] bg-[#111E14] p-5"><p className="text-xs text-[#8BA98F]">{label}</p><p className="mt-2 font-display text-2xl font-bold text-[#E8F0EA]">{value}</p></div>
+  return <div className="motion-card rounded-2xl border border-[#1E3022] bg-[#111E14] p-5"><p className="text-xs text-[#8BA98F]">{label}</p><p className="mt-2 font-display text-2xl font-bold text-[#E8F0EA]">{value}</p></div>
 }
 
 function ChipList({ items, empty }: { items: string[]; empty: string }) {
